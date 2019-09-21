@@ -1743,7 +1743,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6f06a8;
+  background: #b437e3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2634,4 +2634,7 @@ pre {
   padding: 0 10px 10px 10px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+span.post-time {
+  font-size: 0.75em;
 }
