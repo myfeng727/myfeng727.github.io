@@ -538,122 +538,15 @@
 
       
           <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本博客里面的内容都是使用Markdown书写，为了防止以后书写博客忘记某个标记还需要到处翻网页，所以集合一下Markdown的语法。</p>
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>Markdown支持6种级别的标题，对应<code>html</code>标签<code>h1~h6</code>。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># h1</span></span><br><span class="line"><span class="section">## h2</span></span><br><span class="line"><span class="section">### h3</span></span><br><span class="line"><span class="section">#### h4</span></span><br><span class="line"><span class="section">##### h5</span></span><br><span class="line"><span class="section">###### h6</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h1><p>使用<code>&gt;</code>用于段首进行强调，被强调的文字部分将会被高亮显示。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这段文字将被高亮显示</span></span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<blockquote>
-<p>这段文字将被高亮显示</p>
-</blockquote>
-<h1 id="插入连接或图片"><a href="#插入连接或图片" class="headerlink" title="插入连接或图片"></a>插入连接或图片</h1><p>区别在于插入图片前面需要添加一个感叹号。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">点击跳转到百度</span>](<span class="link">http://www.baidu.com</span>)</span><br><span class="line">![<span class="string">图片</span>](<span class="link">https://s2.ax1x.com/2019/09/21/nvLK0S.jpg</span>)</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<p><a href="http://www.baidu.com" target="_blank" rel="noopener">点击跳转到百度</a></p>
-<p><img src="https://s2.ax1x.com/2019/09/21/nvLK0S.jpg" alt="图片"></p>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><p>Markdown支持有序列表和无序列表</p>
-<ul>
-<li>有序列表使用<code>*</code>、<code>+</code>或<code>-</code>标识</li>
-<li>有序列表使用数字加<code>.</code>标识</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>黄瓜</span><br><span class="line"><span class="bullet">* </span>玉米</span><br><span class="line"><span class="bullet">* </span>茄子</span><br><span class="line"></span><br><span class="line"><span class="bullet">+ </span>黄瓜</span><br><span class="line"><span class="bullet">+ </span>玉米</span><br><span class="line"><span class="bullet">+ </span>茄子</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>黄瓜</span><br><span class="line"><span class="bullet">- </span>玉米</span><br><span class="line"><span class="bullet">- </span>茄子</span><br><span class="line"></span><br><span class="line"><span class="bullet">1. </span>黄瓜</span><br><span class="line"><span class="bullet">2. </span>玉米</span><br><span class="line"><span class="bullet">3. </span>茄子</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<ul>
-<li>黄瓜</li>
-<li>玉米</li>
-<li>茄子</li>
-</ul>
-<ul>
-<li>黄瓜</li>
-<li>玉米</li>
-<li>茄子</li>
-</ul>
-<ul>
-<li>黄瓜</li>
-<li>玉米</li>
-<li>茄子</li>
-</ul>
-<ol>
-<li>黄瓜</li>
-<li>玉米</li>
-<li>茄子</li>
-</ol>
-<p>如果在列表中包含多个段落，为保证渲染正常，*与段落首字母之间必须保留四个空格</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*    </span>段落</span><br><span class="line"></span><br><span class="line"><span class="code">	 小段</span></span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<ul>
-<li><p>段落</p>
-<p>小段</p>
-</li>
-</ul>
-<p>如果在列表中加入区块引用，区块引用标记符也需要索引4个空格</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>段落</span><br><span class="line"><span class="code">	&gt; 区块标记</span></span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<ul>
-<li><p>段落</p>
-<blockquote>
-<p>区块标记</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="插入代码块"><a href="#插入代码块" class="headerlink" title="插入代码块"></a>插入代码块</h1><p>Markdown比较流行的一个重要原因，就是它能轻松漂亮地插入代码。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">行内代码：<span class="code">`script`</span>。</span><br><span class="line">插入一整段：</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
-
-<p>这是一整段代码<br>​<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">行内代码：`script`。</span><br><span class="line">插入一整段：</span><br></pre></td></tr></table></figure></p>
-<p>这是一整段代码</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 分割线</span></span><br><span class="line"></span><br><span class="line"><span class="string">有时候，为了排版漂亮，可能会加入分割线。使用三个以上的`*`或`-`。</span></span><br><span class="line"></span><br><span class="line"><span class="string">```markdown</span></span><br><span class="line"><span class="string">***</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<hr>
-<hr>
-<h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><p>如果文字要添加删除线，只需要在文字两端加上两层波浪线<code>~~</code>即可</p>
-<p>效果：</p>
-<p><del>删除线</del></p>
-<h1 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h1><p>下划线通过<code>html</code>的<code>&lt;u&gt;</code>来实现</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>下划线<span class="xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<p><u>下划线</u></p>
-<h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><p>对文字进行强调，<code>*</code>或者<code>_</code>包裹即可。一层是斜体，两层是加粗。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*这里是斜体*</span></span><br><span class="line"><span class="emphasis">_这里是斜体_</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**这里是加粗**</span></span><br><span class="line"><span class="strong">__这里是加粗__</span></span><br></pre></td></tr></table></figure>
-
-<p><em>这里是斜体</em><br><em>这里是斜体</em></p>
-<p><strong>这里是加粗</strong><br>__这里是加粗</p>
-<h1 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h1><p><code>:---</code>代表左对齐 <code>:---:</code>代表居中 <code>---:</code>代表右对齐</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">:---|:---:|---:</span><br><span class="line">项目|项目|项目</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th align="left">表头</th>
-<th align="center">表头</th>
-<th align="right">表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">项目</td>
-<td align="center">项目</td>
-<td align="right">项目</td>
-</tr>
-</tbody></table>
-<h1 id="特殊符号处理"><a href="#特殊符号处理" class="headerlink" title="特殊符号处理"></a>特殊符号处理</h1><p>Markdown使用反斜杠<code>\</code>转义特殊字符</p>
-<p>特殊字符：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line"><span class="bullet">*   </span>星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line"><span class="section">#   井字号</span></span><br><span class="line"><span class="bullet">+   </span>加号</span><br><span class="line"><span class="bullet">-   </span>减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure>
-
-<h1 id="支持HTML元素"><a href="#支持HTML元素" class="headerlink" title="支持HTML元素"></a>支持HTML元素</h1><p>目前支持的HTML元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等。如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 <span class="xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>Ctrl<span class="xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span>+<span class="xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>Alt<span class="xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span>+<span class="xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>Del<span class="xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span> 重启电脑</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
-<p>最后流程图暂时不学习了。。。</p>
-
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/工具/markdown的食用方法/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
