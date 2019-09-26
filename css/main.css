@@ -1743,7 +1743,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c75e63;
+  background: #fffffb;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2933,8 +2933,28 @@ span.post-time {
 .posts-expand {
   padding-top: 0px;
 }
+.content-wrap {
+  width: colc(100% -300px);
+}
+.container .header-inner {
+  width: 280px;
+}
+@media (max-width: 991px) {
+  .content-wrap {
+    width: auto;
+    margin: 20px;
+  }
+  .container .header-inner {
+    width: auto;
+    margin: 20px;
+  }
+}
 @media (max-width: 767px) {
   .content-wrap {
-    width: colc(100% -300px);
+    width: auto;
+    margin: 0px;
+  }
+  .container .header-inner {
+    margin: 20px;
   }
 }
