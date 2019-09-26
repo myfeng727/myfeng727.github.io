@@ -59,18 +59,18 @@
 </script>
 
   <meta name="description" content="前言第二天主要学习了运算符、内置对象、流程控制以及类型转换。 应用方面有：标题上新消息的闪动、表格隔行变色、全选反选。">
-<meta name="keywords" content="js">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js的学习日记2">
-<meta property="og:url" content="http://yoursite.com/学习/js的学习日记2/index.html">
+<meta property="og:title" content="JavaScript的学习日记2">
+<meta property="og:url" content="http://yoursite.com/学习/JavaScript的学习日记2/index.html">
 <meta property="og:site_name" content="读书人的博客">
 <meta property="og:description" content="前言第二天主要学习了运算符、内置对象、流程控制以及类型转换。 应用方面有：标题上新消息的闪动、表格隔行变色、全选反选。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-23T13:02:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js的学习日记2">
+<meta name="twitter:title" content="JavaScript的学习日记2">
 <meta name="twitter:description" content="前言第二天主要学习了运算符、内置对象、流程控制以及类型转换。 应用方面有：标题上新消息的闪动、表格隔行变色、全选反选。">
-  <link rel="canonical" href="http://yoursite.com/学习/js的学习日记2/">
+  <link rel="canonical" href="http://yoursite.com/学习/JavaScript的学习日记2/">
 
 
 <script id="page-configurations">
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>js的学习日记2 | 读书人的博客</title>
+  <title>JavaScript的学习日记2 | 读书人的博客</title>
   
 
 
@@ -187,7 +187,7 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <h1 class="site-subtitle" itemprop="description">我是读书人，不是旅行家，不是收藏夹，更不是搬运工。</h1>
+        <h1 class="site-subtitle" itemprop="description">我是读书人，不是旅行家，不是收藏夹，更不是搬运工</h1>
       
   </div>
 
@@ -279,7 +279,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/学习/js的学习日记2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/学习/JavaScript的学习日记2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="读书人">
@@ -291,10 +291,10 @@
       <meta itemprop="name" content="读书人的博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">js的学习日记2
+        <h1 class="post-title" itemprop="name headline">JavaScript的学习日记2
 
           
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -333,7 +333,7 @@
          <span class="post-time">
             &nbsp; | &nbsp;
                   <span class="post-meta-item-icon">
-                    <i class="fa fa-calendar-o"></i>
+                    <i class="fa fa-file-word-o"></i>
                   </span>
                   <span >字数统计:</span>
                   <span>1.7k(字)</span>
@@ -458,7 +458,7 @@
 <h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;table border width="500"&gt;'</span>);</span><br><span class="line"><span class="comment">// 循环输出行</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">	<span class="built_in">document</span>.write(<span class="string">'&lt;tr&gt;'</span>);</span><br><span class="line">    <span class="comment">// 循环输出单元格</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">		<span class="built_in">document</span>.write(<span class="string">'&lt;td&gt;123&lt;/td&gt;'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">'&lt;/tr&gt;'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;/table&gt;'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过标签名找对象 找到的一定是一个数组，需要通过下标才能选中单个对象</span></span><br><span class="line"><span class="keyword">var</span> trs = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'tr'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; trs.length; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        trs[i].style.background = <span class="string">'lightblue'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="复选框的全选和反选"><a href="#复选框的全选和反选" class="headerlink" title="复选框的全选和反选"></a>复选框的全选和反选</h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>通过修改样式里面<code>checked</code>的值从而修改复选框的状态</p>
-<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> /&gt;</span>##############<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> /&gt;</span>##############<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> /&gt;</span>##############<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"check(true)"</span>&gt;</span>全选<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"check(false)"</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"check('invert')"</span>&gt;</span>反选<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> inputs = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'input'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">check</span>(<span class="params">flag</span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; inputs.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span> (flag == <span class="string">'invert'</span>) &#123;</span></span><br><span class="line">                inputs[i].checked = !inputs[i].checked;</span><br><span class="line"><span class="javascript">            &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line">                inputs[i].checked = flag;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> /&gt;</span>##############<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> /&gt;</span>##############<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> /&gt;</span>##############<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"check(true)"</span>&gt;</span>全选<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"check(false)"</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"check('invert')"</span>&gt;</span>反选<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> inputs = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'input'</span>);</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">check</span><span class="params">(flag)</span></span></span></span><br><span class="line">    &#123;</span><br><span class="line"><span class="actionscript">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; inputs.length; i++) &#123;</span></span><br><span class="line"><span class="actionscript">            <span class="keyword">if</span> (flag == <span class="string">'invert'</span>) &#123;</span></span><br><span class="line">                inputs[i].checked = !inputs[i].checked;</span><br><span class="line"><span class="actionscript">            &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line">                inputs[i].checked = flag;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>() <span class="comment">// 检查是否是NaN</span></span><br><span class="line"><span class="keyword">delete</span> <span class="comment">// 删除对象或者数组里面的元素</span></span><br><span class="line"><span class="comment">// 获取年月日时分秒</span></span><br><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">time.getFullYear(); <span class="comment">// 年</span></span><br><span class="line">time.getMonth();    <span class="comment">// 月</span></span><br><span class="line">time.getDate();     <span class="comment">// 日</span></span><br><span class="line">time.getHours();    <span class="comment">// 时</span></span><br><span class="line">time.getMinutes();  <span class="comment">// 分</span></span><br><span class="line">time.getSeconds();  <span class="comment">// 秒</span></span><br><span class="line">time.getTime();     <span class="comment">// 获取时间戳</span></span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'标签名'</span>); <span class="comment">// 通过标签名找对象</span></span><br><span class="line"><span class="built_in">Number</span>(); <span class="comment">// 强制转换为数值型</span></span><br><span class="line"><span class="built_in">parseInt</span>(); <span class="comment">// 强制转换为整数</span></span><br><span class="line"><span class="built_in">parseFloat</span>(); <span class="comment">// 强制转换为浮点数</span></span><br><span class="line"><span class="built_in">String</span>(); <span class="comment">// 强制转换为字符串</span></span><br><span class="line"><span class="built_in">Boolean</span>(); <span class="comment">// 强制转换为布尔型</span></span><br></pre></td></tr></table></figure>
 
@@ -483,11 +483,23 @@
           
             
           
-          <div class="post-tags">
+          <div class="post-tags" id="post-tags">
             
-              <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+              <a href="/tags/JavaScript/" rel="tag" class="my-footer-tag"><i class="fa fa-tag"></i> JavaScript</a>
             
           </div>
+          <script>
+            var tagsall=document.getElementsByClassName("post-tags")
+            for (var i = tagsall.length - 1; i >= 0; i--){
+                var tags=tagsall[i].getElementsByTagName("a");
+                for (var j = tags.length - 1; j >= 0; j--) {
+                    var r=Math.floor(Math.random()*75+130);
+                    var g=Math.floor(Math.random()*75+100);
+                    var b=Math.floor(Math.random()*75+80);
+                    tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }                        
+          </script>
         
 
         
@@ -495,8 +507,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/学习/js的学习日记1/" rel="next" title="js的学习日记1">
-                  <i class="fa fa-chevron-left"></i> js的学习日记1
+                <a href="/学习/JavaScript的学习日记1/" rel="next" title="JavaScript的学习日记1">
+                  <i class="fa fa-chevron-left"></i> JavaScript的学习日记1
                 </a>
               
             </div>
@@ -607,7 +619,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -660,6 +672,34 @@
       </span>
     </span>
   
+    <span class="post-meta-divider">|</span>
+    <span class="blog-info-name">本站运行天数：</span>
+    <span class="days-count" id="sitedays"></span>
+
+        <script language=javascript>
+            function siteTime(){
+                window.setTimeout("siteTime()", 1000);
+                var seconds = 1000;
+                var minutes = seconds * 60;
+                var hours = minutes * 60;
+                var days = hours * 24;
+                var years = days * 365;
+                var today = new Date();
+                var todayYear = today.getFullYear();
+                var todayMonth = today.getMonth()+1;
+                var todayDate = today.getDate();
+                var todayHour = today.getHours();
+                var todayMinute = today.getMinutes();
+                var todaySecond = today.getSeconds();
+                var t1 = Date.UTC(2019,09,17,0,00,00);
+                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                var diff = t2-t1;
+                var diffYears = Math.floor(diff/years);
+                var diffDays = Math.floor((diff/days)-diffYears*365);
+                document.getElementById("sitedays").innerHTML=diffDays+" 天 ";
+            }
+            siteTime();
+        </script>
 </div>
 
 
@@ -681,7 +721,6 @@
   
 
 
-  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>

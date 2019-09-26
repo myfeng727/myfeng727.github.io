@@ -58,19 +58,19 @@
   };
 </script>
 
-  <meta name="description" content="今天讲师有事下午自习，于是打开w3schoole，捋了捋js中的系统对象。">
-<meta name="keywords" content="js">
+  <meta name="description" content="今天讲师有事下午自习，于是打开w3schoole，捋了捋JavaScript中的系统对象。">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="细品js的系统对象">
-<meta property="og:url" content="http://yoursite.com/学习/细品js的系统对象/index.html">
+<meta property="og:title" content="细品JavaScript的系统对象">
+<meta property="og:url" content="http://yoursite.com/学习/细品JavaScript的系统对象/index.html">
 <meta property="og:site_name" content="读书人的博客">
-<meta property="og:description" content="今天讲师有事下午自习，于是打开w3schoole，捋了捋js中的系统对象。">
+<meta property="og:description" content="今天讲师有事下午自习，于是打开w3schoole，捋了捋JavaScript中的系统对象。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-25T06:05:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="细品js的系统对象">
-<meta name="twitter:description" content="今天讲师有事下午自习，于是打开w3schoole，捋了捋js中的系统对象。">
-  <link rel="canonical" href="http://yoursite.com/学习/细品js的系统对象/">
+<meta name="twitter:title" content="细品JavaScript的系统对象">
+<meta name="twitter:description" content="今天讲师有事下午自习，于是打开w3schoole，捋了捋JavaScript中的系统对象。">
+  <link rel="canonical" href="http://yoursite.com/学习/细品JavaScript的系统对象/">
 
 
 <script id="page-configurations">
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>细品js的系统对象 | 读书人的博客</title>
+  <title>细品JavaScript的系统对象 | 读书人的博客</title>
   
 
 
@@ -187,7 +187,7 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <h1 class="site-subtitle" itemprop="description">我是读书人，不是旅行家，不是收藏夹，更不是搬运工。</h1>
+        <h1 class="site-subtitle" itemprop="description">我是读书人，不是旅行家，不是收藏夹，更不是搬运工</h1>
       
   </div>
 
@@ -279,7 +279,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/学习/细品js的系统对象/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/学习/细品JavaScript的系统对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="读书人">
@@ -291,10 +291,10 @@
       <meta itemprop="name" content="读书人的博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">细品js的系统对象
+        <h1 class="post-title" itemprop="name headline">细品JavaScript的系统对象
 
           
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -329,7 +329,7 @@
          <span class="post-time">
             &nbsp; | &nbsp;
                   <span class="post-meta-item-icon">
-                    <i class="fa fa-calendar-o"></i>
+                    <i class="fa fa-file-word-o"></i>
                   </span>
                   <span >字数统计:</span>
                   <span>5.4k(字)</span>
@@ -364,7 +364,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>今天讲师有事下午自习，于是打开<a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3schoole</a>，捋了捋js中的系统对象。</p>
+        <p>今天讲师有事下午自习，于是打开<a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">w3schoole</a>，捋了捋JavaScript中的系统对象。</p>
 <a id="more"></a>
 
 <h2 id="Array-对象"><a href="#Array-对象" class="headerlink" title="Array 对象"></a>Array 对象</h2><p>Array对象用于在单个的变量中存储多个值。</p>
@@ -1016,11 +1016,23 @@
           
             
           
-          <div class="post-tags">
+          <div class="post-tags" id="post-tags">
             
-              <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+              <a href="/tags/JavaScript/" rel="tag" class="my-footer-tag"><i class="fa fa-tag"></i> JavaScript</a>
             
           </div>
+          <script>
+            var tagsall=document.getElementsByClassName("post-tags")
+            for (var i = tagsall.length - 1; i >= 0; i--){
+                var tags=tagsall[i].getElementsByTagName("a");
+                for (var j = tags.length - 1; j >= 0; j--) {
+                    var r=Math.floor(Math.random()*75+130);
+                    var g=Math.floor(Math.random()*75+100);
+                    var b=Math.floor(Math.random()*75+80);
+                    tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }                        
+          </script>
         
 
         
@@ -1028,8 +1040,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/学习/js的学习日记4/" rel="next" title="js的学习日记4">
-                  <i class="fa fa-chevron-left"></i> js的学习日记4
+                <a href="/学习/JavaScript的学习日记4/" rel="next" title="JavaScript的学习日记4">
+                  <i class="fa fa-chevron-left"></i> JavaScript的学习日记4
                 </a>
               
             </div>
@@ -1136,7 +1148,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1189,6 +1201,34 @@
       </span>
     </span>
   
+    <span class="post-meta-divider">|</span>
+    <span class="blog-info-name">本站运行天数：</span>
+    <span class="days-count" id="sitedays"></span>
+
+        <script language=javascript>
+            function siteTime(){
+                window.setTimeout("siteTime()", 1000);
+                var seconds = 1000;
+                var minutes = seconds * 60;
+                var hours = minutes * 60;
+                var days = hours * 24;
+                var years = days * 365;
+                var today = new Date();
+                var todayYear = today.getFullYear();
+                var todayMonth = today.getMonth()+1;
+                var todayDate = today.getDate();
+                var todayHour = today.getHours();
+                var todayMinute = today.getMinutes();
+                var todaySecond = today.getSeconds();
+                var t1 = Date.UTC(2019,09,17,0,00,00);
+                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                var diff = t2-t1;
+                var diffYears = Math.floor(diff/years);
+                var diffDays = Math.floor((diff/days)-diffYears*365);
+                document.getElementById("sitedays").innerHTML=diffDays+" 天 ";
+            }
+            siteTime();
+        </script>
 </div>
 
 
@@ -1210,7 +1250,6 @@
   
 
 
-  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>

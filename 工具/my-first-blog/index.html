@@ -187,7 +187,7 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <h1 class="site-subtitle" itemprop="description">我是读书人，不是旅行家，不是收藏夹，更不是搬运工。</h1>
+        <h1 class="site-subtitle" itemprop="description">我是读书人，不是旅行家，不是收藏夹，更不是搬运工</h1>
       
   </div>
 
@@ -291,10 +291,10 @@
       <meta itemprop="name" content="读书人的博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">第一篇博客
+        <h1 class="post-title" itemprop="name headline">第一篇博客
 
           
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -333,7 +333,7 @@
          <span class="post-time">
             &nbsp; | &nbsp;
                   <span class="post-meta-item-icon">
-                    <i class="fa fa-calendar-o"></i>
+                    <i class="fa fa-file-word-o"></i>
                   </span>
                   <span >字数统计:</span>
                   <span>480(字)</span>
@@ -444,11 +444,23 @@
           
             
           
-          <div class="post-tags">
+          <div class="post-tags" id="post-tags">
             
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/hexo/" rel="tag" class="my-footer-tag"><i class="fa fa-tag"></i> hexo</a>
             
           </div>
+          <script>
+            var tagsall=document.getElementsByClassName("post-tags")
+            for (var i = tagsall.length - 1; i >= 0; i--){
+                var tags=tagsall[i].getElementsByTagName("a");
+                for (var j = tags.length - 1; j >= 0; j--) {
+                    var r=Math.floor(Math.random()*75+130);
+                    var g=Math.floor(Math.random()*75+100);
+                    var b=Math.floor(Math.random()*75+80);
+                    tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }                        
+          </script>
         
 
         
@@ -462,8 +474,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/学习/js的学习日记1/" rel="prev" title="js的学习日记1">
-                  js的学习日记1 <i class="fa fa-chevron-right"></i>
+                <a href="/学习/JavaScript的学习日记1/" rel="prev" title="JavaScript的学习日记1">
+                  JavaScript的学习日记1 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -564,7 +576,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -617,6 +629,34 @@
       </span>
     </span>
   
+    <span class="post-meta-divider">|</span>
+    <span class="blog-info-name">本站运行天数：</span>
+    <span class="days-count" id="sitedays"></span>
+
+        <script language=javascript>
+            function siteTime(){
+                window.setTimeout("siteTime()", 1000);
+                var seconds = 1000;
+                var minutes = seconds * 60;
+                var hours = minutes * 60;
+                var days = hours * 24;
+                var years = days * 365;
+                var today = new Date();
+                var todayYear = today.getFullYear();
+                var todayMonth = today.getMonth()+1;
+                var todayDate = today.getDate();
+                var todayHour = today.getHours();
+                var todayMinute = today.getMinutes();
+                var todaySecond = today.getSeconds();
+                var t1 = Date.UTC(2019,09,17,0,00,00);
+                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                var diff = t2-t1;
+                var diffYears = Math.floor(diff/years);
+                var diffDays = Math.floor((diff/days)-diffYears*365);
+                document.getElementById("sitedays").innerHTML=diffDays+" 天 ";
+            }
+            siteTime();
+        </script>
 </div>
 
 
@@ -638,7 +678,6 @@
   
 
 
-  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
