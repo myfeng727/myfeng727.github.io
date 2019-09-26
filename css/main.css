@@ -1743,7 +1743,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4e256a;
+  background: #c75e63;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2841,7 +2841,7 @@ span.post-time {
   -moz-box-shadow: 0 4px 8px 12px rgba(7,17,27,0.12);
 }
 .container .header-inner {
-  width: 280px;
+  width: auto;
 }
 .header-inner {
   margin-top: 13px;
@@ -2932,4 +2932,9 @@ span.post-time {
 }
 .posts-expand {
   padding-top: 0px;
+}
+@media (max-width: 767px) {
+  .content-wrap {
+    width: colc(100% -300px);
+  }
 }
