@@ -1743,7 +1743,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #397fff;
+  background: #ff5950;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2903,7 +2903,7 @@ span.post-time {
   text-align: left;
 }
 .blog-show {
-  background: url("https://i.loli.net/2019/08/24/zSfQqaeXsu67GUT.jpg");
+  background: url("https://s2.ax1x.com/2019/09/25/uZXklR.jpg");
   background-color: rgba(0,0,0,0);
   background-position-x: 0%;
   background-position-y: 0%;
