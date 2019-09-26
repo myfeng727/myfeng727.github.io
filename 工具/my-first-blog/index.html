@@ -274,7 +274,221 @@
             
 
   <div id="posts" class="posts-expand">
-     <div class="blog-show"></div>
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/工具/my-first-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="读书人">
+      <meta itemprop="description" content="记录自己学习的点点滴滴">
+      <meta itemprop="image" content="https://s2.ax1x.com/2019/09/21/nvLK0S.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读书人的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">第一篇博客
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-17 17:11:34 / 修改时间：20:00:00" itemprop="dateCreated datePublished" datetime="2019-09-17T17:11:34+08:00">2019-09-17</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          <!-- 以下部分为：字数统计、阅读时长插入代码 -->
+         <span class="post-time">
+            &nbsp; | &nbsp;
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-file-word-o"></i>
+                  </span>
+                  <span >字数统计:</span>
+                  <span>480(字)</span>
+
+                </span>
+
+              <span class="post-time">
+            &nbsp; | &nbsp;
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-calendar-o"></i>
+                  </span>
+                  <span>阅读时长:</span>
+                  <span>1min</span>
+
+                </span>
+        <!-- 以上部分为：字数统计、阅读时长插入代码 -->
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>今天利用来之不易的时间学习了使用hexo-github建立博客，根本目的是用来记录自己的学习情况。</p>
+<p>第一篇博客用来说明hexo的基本使用，方便我今后查看。</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th align="left">文件/文件夹</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">_config.yml</td>
+<td align="left">配置文件</td>
+</tr>
+<tr>
+<td align="left">public</td>
+<td align="left">生成的静态文件，这个目录最终会发布到服务器</td>
+</tr>
+<tr>
+<td align="left">scaffolds</td>
+<td align="left">一些通用的markdown模板</td>
+</tr>
+<tr>
+<td align="left">source</td>
+<td align="left">编写的markdown文件， _drafts草稿文件，_posts发表的文章</td>
+</tr>
+<tr>
+<td align="left">themes</td>
+<td align="left">博客的模板</td>
+</tr>
+</tbody></table>
+<h3 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h3><ol>
+<li><p>使用命令：</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> <span class="type"></span>[layout]&lt;title&gt;</span><br><span class="line">$ hexo <span class="keyword">new</span> <span class="type"></span>"post title with whitespace<span class="string">"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接在_drafts新建草稿，在_posts新建发布文章。顶部的相关描述：</p>
+</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">说明</span> <span class="string">//</span> <span class="string">文章页面上显示名称</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="bullet">-9</span><span class="bullet">-17</span> <span class="number">18</span><span class="string">:18:18//</span> <span class="string">文章生成时间</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">默认分类</span> <span class="string">//</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="string">//</span> <span class="string">开启文章的评论功能</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">[tag1,tag2]</span> <span class="string">//文章标签，可空</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">//附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span></span><br><span class="line"><span class="attr">top:</span> <span class="string">//</span> <span class="string">置顶</span> <span class="string">按数字从小到大排序</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">以下是正文</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span> hexo g <span class="comment">// 生成静态文件</span></span><br><span class="line"><span class="symbol">$</span> hexo s <span class="comment">// 启动服务器</span></span><br><span class="line"><span class="symbol">$</span> hexo p <span class="comment">// 发表草稿</span></span><br><span class="line"><span class="symbol">$</span> hexo d <span class="comment">// 部署网站</span></span><br><span class="line"><span class="symbol">$</span> hexo clean <span class="comment">// 清除缓存文件和已生成的静态文件</span></span><br><span class="line"><span class="symbol">$</span> hexo g -d <span class="comment">// 完成后部署</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="引用块-1"><a href="#引用块-1" class="headerlink" title="引用块"></a>引用块</h3><p>在文章中插入代码</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock <span class="string">[title]</span> <span class="string">[lang:language]</span> <span class="string">[url]</span> <span class="string">[link text]</span> %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p>在文章中插入指定大小的图片</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] /path/to/image [width] [height] <span class="string">"title text 'alt text'"</span> %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><p>在文章中插入链接，并自动给外部链接添加target=”_blank”属性</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="文章摘要和截断"><a href="#文章摘要和截断" class="headerlink" title="文章摘要和截断"></a>文章摘要和截断</h3><p>在文章中使用<code>&lt;!-- more --&gt;</code>，那么前面的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。</p>
+
+    </div>
+
+    
+    
+    
+
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:18px;">-------------本文已结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags" id="post-tags">
+            
+              <a href="/tags/hexo/" rel="tag" class="my-footer-tag"><i class="fa fa-tag"></i> hexo</a>
+            
+          </div>
+          <script>
+            var tagsall=document.getElementsByClassName("post-tags")
+            for (var i = tagsall.length - 1; i >= 0; i--){
+                var tags=tagsall[i].getElementsByTagName("a");
+                for (var j = tags.length - 1; j >= 0; j--) {
+                    var r=Math.floor(Math.random()*75+130);
+                    var g=Math.floor(Math.random()*75+100);
+                    var b=Math.floor(Math.random()*75+80);
+                    tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }                        
+          </script>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/学习/JavaScript的学习日记1/" rel="prev" title="JavaScript的学习日记1">
+                  JavaScript的学习日记1 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 

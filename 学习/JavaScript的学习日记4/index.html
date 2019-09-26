@@ -274,7 +274,273 @@
             
 
   <div id="posts" class="posts-expand">
-     <div class="blog-show"></div>
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/学习/JavaScript的学习日记4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="读书人">
+      <meta itemprop="description" content="记录自己学习的点点滴滴">
+      <meta itemprop="image" content="https://s2.ax1x.com/2019/09/21/nvLK0S.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读书人的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">JavaScript的学习日记4
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-24 20:36:30" itemprop="dateCreated datePublished" datetime="2019-09-24T20:36:30+08:00">2019-09-24</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          <!-- 以下部分为：字数统计、阅读时长插入代码 -->
+         <span class="post-time">
+            &nbsp; | &nbsp;
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-file-word-o"></i>
+                  </span>
+                  <span >字数统计:</span>
+                  <span>2.2k(字)</span>
+
+                </span>
+
+              <span class="post-time">
+            &nbsp; | &nbsp;
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-calendar-o"></i>
+                  </span>
+                  <span>阅读时长:</span>
+                  <span>8min</span>
+
+                </span>
+        <!-- 以上部分为：字数统计、阅读时长插入代码 -->
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>第四天的学习内容：</p>
+<blockquote>
+<p>回调、匿名、递归函数；变量的作用域链及打破作用域链；构造器函数；原型对象；BOM</p>
+</blockquote>
+<p>应用：</p>
+<blockquote>
+<p>进度条； 失去焦点改变标题</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="回调、匿名、递归函数"><a href="#回调、匿名、递归函数" class="headerlink" title="回调、匿名、递归函数"></a>回调、匿名、递归函数</h2><blockquote>
+<p>回调函数：被当做实参进行调用的函数。</p>
+<p>匿名函数：没有函数名的函数。</p>
+<p>递归函数：在自己里面调用自己的函数。</p>
+</blockquote>
+<p>由于有<code>php</code>的基础，就不详细介绍这些函数的作用，直接放实例。</p>
+<p>回调+匿名函数的实例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">document</span>.write(<span class="string">'午时已到~'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>递归函数的实例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> res = prompt(<span class="string">'你是谁？'</span>); <span class="comment">// 弹窗 返回输入的内容或者false</span></span><br><span class="line">    <span class="keyword">if</span> (res == <span class="string">'我是谁。'</span>) &#123;</span><br><span class="line">        alert(<span class="string">'欢迎回来！'</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        login();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">login();</span><br></pre></td></tr></table></figure>
+
+<p>另外还有一种只能执行一次的函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 函数体</span></span><br><span class="line">    demo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">// 通过将自己转为空的匿名函数从而使下次调用不执行函数体里面的代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="作用域链及打破"><a href="#作用域链及打破" class="headerlink" title="作用域链及打破"></a>作用域链及打破</h2><blockquote>
+<p>作用域链是<code>js</code>函数在创建的时候定义的，用来寻找变量的一种索引。</p>
+</blockquote>
+<blockquote>
+<p>作用域链索引的内部规则是将函数自身的本地变量放在最前面，把自身的父级函数变量放在其次，再把高一级的函数的变量放在更后面，以此类推到window全局对象位置。</p>
+</blockquote>
+<blockquote>
+<p>当需要查找一个变量的时候，js解析器会从作用域链去查找该变量，先从该函数的本地变量开始查找，如果没有，则在下一级作用域链进行查找，直到最后也没找到相应变量则会报未定义的错误。</p>
+</blockquote>
+<blockquote>
+<p>如果全局变量和局部变量重名，局部作用域中的局部变量会覆盖全局变量，直到离开该局部变量后恢复。</p>
+</blockquote>
+<blockquote>
+<p>可以在局部作用域中使用<code>window</code>全局变量设置，使父级及更上级作用域访问，即打破作用域链。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">'局部变量'</span>;</span><br><span class="line">    <span class="built_in">window</span>.b = <span class="string">'window的全局变量'</span>;</span><br><span class="line">&#125;</span><br><span class="line">demo();</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 报错，全局不能访问局部变量</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 'window的全局变量'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="构造器函数"><a href="#构造器函数" class="headerlink" title="构造器函数"></a>构造器函数</h2><p>当需要创建多个属性和方法都相同的对象时，可以使用构造函数创建:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明构造函数的语法和普通函数相同，但构造函数的函数名首字母大写</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,stuID</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 通过new调用时，构造函数中的this表示正在创建的对象</span></span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.stuID = stuID;</span><br><span class="line">    <span class="keyword">this</span>.study = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'正在学习'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用构造函数创建对象，必须用过new调用</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> Student(<span class="string">'张三'</span>,<span class="number">1001</span>);</span><br><span class="line">s1.study(); <span class="comment">// 正在学习</span></span><br></pre></td></tr></table></figure>
+
+<p>但上面是<code>ES5</code>的内容，在<code>ES6</code>中，<code>class</code>类不作为对象的模板被引用，可以通过<code>class</code>关键字定义类。</p>
+<blockquote>
+<p>class的本质还是function，但类时不可重复声明！</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Study</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(name,stuID) &#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.stuID = stuID;</span><br><span class="line">    &#125;   </span><br><span class="line">    study()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'正在学习'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> Study(<span class="string">'张三'</span>,<span class="number">1001</span>);</span><br><span class="line">s1.study(); <span class="comment">// 正在学习</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h2><p>当创建构造器函数后，如果需要添加新属性或方法，则需要prototype属性。</p>
+<blockquote>
+<p>在js中，我们所创建的每一个函数，解析器都会为他添加一个prototype属性，这个属性对应一个对象，就是原型对象</p>
+<p>当我们访问一个对象的属性或方法时，会先在自身找，找不到就去原型中找，再找不到就去原型的原型中找，直到找到Object。</p>
+</blockquote>
+<p>例如在上面创造的构造函数添加新属性和方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Study.prototype.money = <span class="string">'100'</span>;</span><br><span class="line">Study.prototype.listen = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">                         </span>&#123;</span><br><span class="line">                             <span class="built_in">console</span>.log(<span class="string">'正在听课'</span>);</span><br><span class="line">                         &#125;</span><br><span class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> Study(<span class="string">'张三'</span>, <span class="number">1001</span>);</span><br><span class="line">s1.listen(); <span class="comment">// 正在听课</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><blockquote>
+<p><code>BOM:Browser Object Model</code>是浏览器对象模型，提供了独立与内容的，可以与浏览器窗口进行互动的对象结构。</p>
+</blockquote>
+<h3 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h3><blockquote>
+<p><code>BOM</code>的和新对象，它表示浏览器的一个实例。</p>
+<p>所有全局变量是<code>window</code>对象的属性</p>
+<p>所有全局函数是<code>window</code>对象的方法</p>
+</blockquote>
+<h4 id="常用对象方法"><a href="#常用对象方法" class="headerlink" title="常用对象方法"></a>常用对象方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'提示信息'</span>); <span class="comment">// 显示带有一段消息和一个确认按钮的警告框。</span></span><br><span class="line">confirm(<span class="string">'确认信息'</span>); <span class="comment">// 显示带有一段消息以及确认按钮和取消按钮的对话框。</span></span><br><span class="line">prompt(<span class="string">'弹出输入框'</span>, <span class="string">'默认值'</span>); <span class="comment">// 显示可提示用户输入的对话框。</span></span><br><span class="line">open(<span class="string">'url地址'</span>,<span class="string">'打开方式(_self或_black)，‘新窗口的大小'</span>); <span class="comment">// 打开一个新的浏览器窗口 注：如果url为空，则默认打开一个空白页面；如果打开方式为空，则默认为新窗口方式打开页面；返回值为新打开窗口的window对象</span></span><br><span class="line">setTimeout(<span class="string">'函数'</span>,<span class="string">'时间'</span>); <span class="comment">// 在指定的毫秒数后调用函数或计算表达式。</span></span><br><span class="line">setInterval(<span class="string">'函数'</span>,<span class="string">'时间'</span>); <span class="comment">// 按照指定的周期（以毫秒计）来调用函数或计算表达式。</span></span><br><span class="line">clearTimeout(<span class="string">'setTimeout的返回值'</span>); <span class="comment">// 取消由 setTimeout() 方法设置的 timeout。</span></span><br><span class="line">clearInterval(<span class="string">'setInterval的返回值'</span>); <span class="comment">// 取消由 setInterval() 设置的 timeout。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><blockquote>
+<p>用于获得当前页面的地址，并把浏览器重定向到新的页面。</p>
+</blockquote>
+<h4 id="常用对象属性"><a href="#常用对象属性" class="headerlink" title="常用对象属性"></a>常用对象属性</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location.herf = <span class="string">'url地址'</span>; <span class="comment">// 跳转到url地址</span></span><br><span class="line">location.hash; <span class="comment">// 设置或返回#号后面的字符串</span></span><br><span class="line">location.search; <span class="comment">// 设置或返回?号后面的所有制</span></span><br><span class="line">location.portocole; <span class="comment">// 设置或返回当前url的协议</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="常用对象方法-1"><a href="#常用对象方法-1" class="headerlink" title="常用对象方法"></a>常用对象方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location.assign(<span class="string">'url'</span>); <span class="comment">// 加载新的文档</span></span><br><span class="line">location.reload(); <span class="comment">// 重新加载当前文档</span></span><br><span class="line">location.replace(); <span class="comment">// 用新文档替换当前文档</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h3><blockquote>
+<p>包含有关访问者浏览器的信息</p>
+</blockquote>
+<h4 id="常用对象属性-1"><a href="#常用对象属性-1" class="headerlink" title="常用对象属性"></a>常用对象属性</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">navigator.userAgent; <span class="comment">// 返回由客户机发送服务器的 user-agent 头部的值。</span></span><br><span class="line"><span class="comment">// 用来完成浏览器的判断</span></span><br><span class="line"><span class="keyword">if</span> (navigator.userAgent.indexOf(<span class="string">'Chrome'</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'是谷歌浏览器'</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'不是谷歌浏览器'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h3><blockquote>
+<p>包含有关用户屏幕的信息</p>
+</blockquote>
+<h4 id="常用对象属性-2"><a href="#常用对象属性-2" class="headerlink" title="常用对象属性"></a>常用对象属性</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen.availWidth; <span class="comment">// 返回访问者屏幕的宽度，以像素计，减去界面特性，如窗口任务栏。</span></span><br><span class="line">screen.availHeight; <span class="comment">// 返回访问者屏幕的高度，以像素计，减去界面特性，如窗口任务栏。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><blockquote>
+<p>包含用户在浏览器窗口访问过的<code>url</code></p>
+</blockquote>
+<h4 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a>对象方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">history.back(); <span class="comment">// 加载历史列表的前一个url。相当于浏览器的后退按钮</span></span><br><span class="line">history.forward(); <span class="comment">// 加载历史列表的下一个url。相当于浏览器的前进按钮</span></span><br><span class="line">histor.go(<span class="string">'参数'</span>); <span class="comment">// 加载历史列表的某一个页面。 -1表示后退一步 1表示前进一步</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="1-进度条"><a href="#1-进度条" class="headerlink" title="1. 进度条"></a>1. 进度条</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>通过定时器改变宽度实现进度条的增加。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">body</span>&#123;<span class="attribute">background</span>: <span class="number">#f2f2f2</span>;&#125;</span></span><br><span class="line"><span class="css">    <span class="selector-id">#main</span>&#123;<span class="attribute">height</span>: <span class="number">6px</span>;<span class="attribute">width</span>: <span class="number">500px</span>;<span class="attribute">margin</span>:<span class="number">100px</span> auto;&#125;</span></span><br><span class="line"><span class="css">    <span class="selector-id">#inner</span>&#123;</span></span><br><span class="line">    height: 6px;</span><br><span class="line">    width: 0;</span><br><span class="line"><span class="css">    <span class="selector-tag">background</span>: <span class="selector-id">#e4a348</span>;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">position</span><span class="selector-pseudo">:relative</span>;</span></span><br><span class="line">    top: 8px;</span><br><span class="line">    left: 5px;</span><br><span class="line">    border-radius: 2px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-id">#line</span>&#123;</span></span><br><span class="line">        position: relative;</span><br><span class="line">        left: 5px;</span><br><span class="line"><span class="css">        <span class="selector-tag">top</span><span class="selector-pseudo">:14px</span>;</span></span><br><span class="line">        width: 560px;</span><br><span class="line"><span class="css">        <span class="selector-tag">border-top</span>: 2<span class="selector-tag">px</span> <span class="selector-tag">dashed</span> <span class="selector-id">#fff</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"inner"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"begin(this)"</span>&gt;</span>开始<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">	<span class="keyword">var</span> _width = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> timer;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> inner = <span class="built_in">document</span>.getElementById(<span class="string">'inner'</span>);</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">begin</span><span class="params">(btn)</span></span></span></span><br><span class="line">    &#123;</span><br><span class="line"><span class="actionscript">        <span class="comment">// 判断定时器是否开始，主要是防止定时器叠加。</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span> (timer === <span class="literal">undefined</span>) &#123;</span></span><br><span class="line"><span class="actionscript">            btn.innerHTML = <span class="string">'暂停'</span>;</span></span><br><span class="line"><span class="actionscript">            timer = setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span></span></span></span><br><span class="line">            &#123;</span><br><span class="line">                _width++;</span><br><span class="line"><span class="actionscript">                <span class="comment">// 根据进度条的长度改变背景颜色</span></span></span><br><span class="line"><span class="actionscript">                <span class="keyword">if</span> (_width &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="actionscript">                    inner.style.background = <span class="string">'#e4a348'</span>;</span></span><br><span class="line">                &#125;</span><br><span class="line"><span class="actionscript">                <span class="keyword">if</span> (_width &gt; <span class="number">150</span>) &#123;</span></span><br><span class="line"><span class="actionscript">                    inner.style.background = <span class="string">'#37a1d4'</span>;</span></span><br><span class="line">                &#125; </span><br><span class="line"><span class="actionscript">                <span class="keyword">if</span> (_width &gt; <span class="number">350</span>) &#123;</span></span><br><span class="line"><span class="actionscript">                    inner.style.background = <span class="string">'#4acec8'</span>;</span></span><br><span class="line">                &#125; </span><br><span class="line"><span class="actionscript">                <span class="comment">// 当达到100%时清除定时器</span></span></span><br><span class="line"><span class="actionscript">                <span class="keyword">if</span> (_width &gt;= <span class="number">560</span>) &#123;</span></span><br><span class="line"><span class="actionscript">                    inner.style.background = <span class="string">'#ccc'</span>;</span></span><br><span class="line"><span class="actionscript">                    btn.innerHTML = <span class="string">'下载完成'</span>;</span></span><br><span class="line"><span class="vbscript">                    clearInterval(<span class="built_in">timer</span>);</span></span><br><span class="line">                &#125;</span><br><span class="line"><span class="actionscript">                inner.style.width = _width + <span class="string">'px'</span>;</span></span><br><span class="line">            &#125;, 10);</span><br><span class="line"><span class="actionscript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">            <span class="comment">// 暂停功能</span></span></span><br><span class="line"><span class="actionscript">            btn.innerHTML = <span class="string">'继续'</span>;</span></span><br><span class="line"><span class="vbscript">            clearInterval(<span class="built_in">timer</span>);</span></span><br><span class="line"><span class="actionscript">            <span class="comment">// 将定时器的返回值改为undefined 从而点击按钮能够继续</span></span></span><br><span class="line"><span class="actionscript">            timer = <span class="literal">undefined</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-失去焦点改变标题"><a href="#2-失去焦点改变标题" class="headerlink" title="2.失去焦点改变标题"></a>2.失去焦点改变标题</h3><h4 id="思路1"><a href="#思路1" class="headerlink" title="思路1"></a>思路1</h4><p><code>onblur</code>是失去焦点的时候执行。</p>
+<p><code>onfocus</code>是得到焦点的时候执行。</p>
+<p>将两者加载<code>body</code>标签里，从而控制失去或得到焦点文档的行为。</p>
+<h4 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onblur</span>=<span class="string">"change()"</span> <span class="attr">onfocus</span>=<span class="string">"change(true)"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    	<span class="function"><span class="keyword">function</span> <span class="title">change</span><span class="params">(flag)</span></span></span></span><br><span class="line">        &#123;</span><br><span class="line"><span class="actionscript">            <span class="keyword">if</span> (flag) &#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.title = <span class="string">'正常标题'</span>;</span></span><br><span class="line"><span class="actionscript">            &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.title = <span class="string">'你快回来'</span>;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="思路2"><a href="#思路2" class="headerlink" title="思路2"></a>思路2</h4><p><code>visibilitychange</code>事件是浏览器新添加的一个事件。</p>
+<blockquote>
+<p>当浏览器的标签页切换到后台，或者从后台切换到前台就会触发该事件。</p>
+</blockquote>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.onvisibilitychange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">document</span>.hidden) &#123;</span><br><span class="line">        <span class="built_in">document</span>.title = <span class="string">'你快回来'</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">document</span>.title = <span class="string">'正常标题'</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置定时器的时候注意是否存在定时器叠加的问题。</span></span><br><span class="line"><span class="comment">// 递归、回调、匿名函数的使用。</span></span><br><span class="line">confirm(); <span class="comment">// 确认框</span></span><br><span class="line">prompt(); <span class="comment">// 对话框</span></span><br><span class="line">location.href = <span class="string">'url地址'</span>; <span class="comment">// 跳转</span></span><br><span class="line">location.protocol; <span class="comment">// 当前url的协议</span></span><br><span class="line">location.reload(); <span class="comment">// 重新加载当前页</span></span><br><span class="line">history.go(); <span class="comment">// -1 后退一步 1 前进一步</span></span><br><span class="line">screen.availWidth; <span class="comment">// 屏幕可用宽度</span></span><br><span class="line">screen.availHeight; <span class="comment">// 屏幕可用高度</span></span><br><span class="line">navigator.userAgent; <span class="comment">// 浏览器的详细信息</span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:18px;">-------------本文已结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags" id="post-tags">
+            
+              <a href="/tags/JavaScript/" rel="tag" class="my-footer-tag"><i class="fa fa-tag"></i> JavaScript</a>
+            
+          </div>
+          <script>
+            var tagsall=document.getElementsByClassName("post-tags")
+            for (var i = tagsall.length - 1; i >= 0; i--){
+                var tags=tagsall[i].getElementsByTagName("a");
+                for (var j = tags.length - 1; j >= 0; j--) {
+                    var r=Math.floor(Math.random()*75+130);
+                    var g=Math.floor(Math.random()*75+100);
+                    var b=Math.floor(Math.random()*75+80);
+                    tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }                        
+          </script>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/学习/JavaScript的学习日记3/" rel="next" title="JavaScript的学习日记3">
+                  <i class="fa fa-chevron-left"></i> JavaScript的学习日记3
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/学习/细品JavaScript的系统对象/" rel="prev" title="细品JavaScript的系统对象">
+                  细品JavaScript的系统对象 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
