@@ -243,7 +243,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">9</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">10</span></a>
 
   </li>
       
@@ -265,7 +265,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
       
@@ -287,7 +287,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">12</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">13</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -443,7 +443,7 @@
 <a id="more"></a>
 
 <h2 id="绑定事件的方式"><a href="#绑定事件的方式" class="headerlink" title="绑定事件的方式"></a>绑定事件的方式</h2><h3 id="在DOM元素中直接绑定"><a href="#在DOM元素中直接绑定" class="headerlink" title="在DOM元素中直接绑定"></a>在DOM元素中直接绑定</h3><p>直接在html的标签中添加事件属性：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">onclick</span>=<span class="string">"func()"</span> <span class="attr">onclick</span>=<span class="string">"func1()"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">// 执行</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">// 不执行</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">onclick</span>=<span class="string">"func()"</span> <span class="attr">onclick</span>=<span class="string">"func1()"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">	<span class="function"><span class="keyword">function</span> <span class="title">func</span><span class="params">()</span></span>&#123;&#125;; <span class="comment">// 执行</span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">func1</span><span class="params">()</span></span>&#123;&#125;; <span class="comment">// 不执行</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>这样做有两个缺点：</p>
 <blockquote>
@@ -527,7 +527,7 @@
 </tr>
 </tbody></table>
 <h4 id="单双击事件的区分"><a href="#单双击事件的区分" class="headerlink" title="单双击事件的区分"></a>单双击事件的区分</h4><p>鼠标点击事件中各个事件的发生顺序：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> i = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span></span><br><span class="line"><span class="javascript">    btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span> + i + <span class="string">' onclick'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    btn.ondblclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span> + i + <span class="string">' ondblclick'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    btn.onmousedown = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span>+ i + <span class="string">' onmousedown'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    btn.onmouseup = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span> + i + <span class="string">' onmouseup'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> i = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span></span><br><span class="line"><span class="actionscript">    btn.onclick = <span class="function"><span class="keyword">function</span><span class="params">()</span></span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span> + i + <span class="string">' onclick'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    btn.ondblclick = <span class="function"><span class="keyword">function</span><span class="params">()</span></span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span> + i + <span class="string">' ondblclick'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    btn.onmousedown = <span class="function"><span class="keyword">function</span><span class="params">()</span></span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span>+ i + <span class="string">' onmousedown'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    btn.onmouseup = <span class="function"><span class="keyword">function</span><span class="params">()</span></span></span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'i: '</span> + i + <span class="string">' onmouseup'</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>当单击的时候显示：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">i</span>: <span class="number">1</span> onmousedown</span><br><span class="line"><span class="selector-tag">i</span>: <span class="number">2</span> onmouseup</span><br><span class="line"><span class="selector-tag">i</span>: <span class="number">3</span> onclick</span><br></pre></td></tr></table></figure>
@@ -680,7 +680,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -693,7 +693,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -706,7 +706,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
